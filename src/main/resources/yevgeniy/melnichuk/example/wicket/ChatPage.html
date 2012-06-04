@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <style><!--
+        span.from {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        p.message {
+            margin: 0;
+            margin-bottom: 0.2em;
+        }
+        
+        form {
+            margin-bottom: 10px;
+        }
+    --></style>
+</head>
+<body>
+    <p>Hi <span wicket:id="username"></span>, say something nice.</p>
+    <form wicket:id="form" class="form">
+        <input type="text" wicket:id="message">
+        <input type="submit" value="send message"  wicket:id="submit">
+    </form>
+    <div wicket:id="messages">
+        <p wicket:id="message" class="message">
+            <span class="from" wicket:id="from">
+            </span><span wicket:id="text"></span>
+        </p>
+    </div>
+</body>
+</html>
